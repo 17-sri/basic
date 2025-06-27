@@ -1,0 +1,32 @@
+1. pip install speechrecognition 
+    Purpose: Converts speech to text.
+    Use case: Allows your program to understand what you're saying through the microphone.
+
+2. pip install pyaudio
+    Purpose: Captures audio from the microphone.
+    Use case: Needed by speechrecognition to access microphone input.
+    Note: This package can be tricky to install on Windows due to system dependencies. Let me know if you get errors.
+
+3. pip install setuptools
+    Purpose: Helps with installing and managing Python packages.
+    Use case: Some packages depend on setuptools for proper installation or configuration. It's a core utility in Python packaging.
+
+4. pip install pyttsx3
+    Purpose: Converts text to speech.
+    Use case: Allows your program to talk back to the user.
+
+
+Package         	    Used For	         Function
+------------------------------------------------------------------------
+speechrecognition	    Speech → Text	     Understands spoken commands
+pyaudio	                Audio input	         Captures mic input
+setuptools	            Package setup        Manages installations
+pyttsx3	                Text → Speech	     Makes your app speak
+
+5. pip install pocketsphinx
+     it's a lightweight speech recognition engine that works offline. 
+     
+6. 
+
+    
+
