@@ -1,0 +1,95 @@
+<!-- This is without UI and using Functions -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <style>
+    button {
+      /* just for fun, not in the script */
+      font-style: italic;
+      font-weight: 700;
+      margin: 5px;
+      padding: 5px;
+      color: rgb(222, 22, 22);
+      background-color: rgb(220, 238, 153);
+      border-radius: 17px;
+      text-align: center;
+      margin-left: 5%;
+      font-size: large;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <h1>Simple <b>Rock-Paper-Scissors</b> Game</h1>
+  </p>
+
+  <button onclick=" 
+    playGame('rock'); // When you pick Rock
+  ">Rock</button>
+
+  <button onclick=" 
+    playGame('paper'); // When you pick Paper
+  ">Paper</button>
+
+  <button onclick=" 
+    playGame('scissors'); // When you pick Scissors
+  ">Scissors</button>
+
+  <script>
+    function playGame(playerMove) {
+      const computerMove = pickComputerMove();
+      let result = '';
+      if (playerMove === 'rock') {
+        if (computerMove === 'rock') {
+          result = 'It is a Tie';
+        } else if (computerMove === 'paper') {
+          result = 'You Lose';
+        } else if (computerMove === 'scissors') {
+          result = 'You Win'
+        }
+      }
+
+      else if (playerMove == 'paper') {
+        if (computerMove == 'rock') {
+          result = 'You Win';
+        } else if (computerMove == 'paper') {
+          result = 'It is a Tie';
+        } else if (computerMove == 'scissors') {
+          result = 'You Lose';
+        }
+      }
+
+      else if (playerMove === 'scissors') {
+        if (computerMove == 'rock') {
+          result = 'You Lose';
+        } else if (computerMove == 'paper') {
+          result = 'You Win';
+        } else if (computerMove == 'scissors') {
+          result = 'It is a Tie';
+        }
+      }
+      alert(`You picked ${playerMove}, Computer picked ${computerMove}, ${result}`)
+    }
+
+    function pickComputerMove() {
+      const randomNumber = Math.random(); // Used 'const' because it cannot be changed 
+      let computerMove = ''; // used 'let' because it can be changed
+      if (randomNumber > 0 && randomNumber < 0.33) {
+        computerMove = 'rock'
+      } else if (randomNumber > 0.33 && randomNumber < 0.66) {
+        computerMove = 'paper';
+      } else if (randomNumber > 0.66 && randomNumber < 1) {
+        computerMove = 'scissors';
+      }
+      return computerMove;
+    }
+
+  </script>
+</body>
+
+</html>
