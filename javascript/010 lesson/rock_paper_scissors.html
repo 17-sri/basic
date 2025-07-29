@@ -1,124 +1,43 @@
 <!-- This is with UI and using Functions, Objects and DOM -->
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/rock_paper_scissors.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors</title>
-  <style>
-   
-  </style>
-</head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
 
-<body>
-  <p>
-    <h1>Simple <b>Rock-Paper-Scissors</b> Game</h1>
-  </p>
+    <button onclick="playGame('rock');" class="move-button">
+      <img src="images/rock-emoji.png" class="move-icon"/>
+    </button>
 
-  <button onclick=" 
-    playGame('rock'); // When you pick Rock
-  ">Rock</button>
+    <button onclick="playGame('paper');" class="move-button">
+      <img src="images/paper-emoji.png" class="move-icon"/>
+    </button>
 
-  <button onclick=" 
-    playGame('paper'); // When you pick Paper
-  ">Paper</button>
+    <button
+      onclick="playGame('scissors'); "class="move-button">
+      <img src="images/scissors-emoji.png" class="move-icon"/>
+    </button>
 
-  <button onclick=" 
-    playGame('scissors'); // When you pick Scissors
-  ">Scissors</button>
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
 
-  <p class="js-result"></p>
-  <p class="js-moves"></p>
-  <p class="js-score"></p>
+    <button
+      onclick="
+      score.wins = 0;
+      score.loses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();"
+      class="reset-score-button">Reset Score
+    </button>
 
-  <button onclick=" // When you reset score
-    score.wins = 0;
-    score.loses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-    updateScoreElement();
-  ">Reset Score</button>
-
-  <script>
-    let score = JSON.parse(localStorage.getItem('score')) || {
-      wins : 0,
-      loses : 0,
-      ties : 0
-    };
-    updateScoreElement();
-    /* this is same as above code
-      if (!score) {
-        score = {
-          wins: 0,
-          loses: 0,
-          ties: 0
-        };
-      }
-      */
-    function playGame(playerMove) {
-      const computerMove = pickComputerMove();
-      let result = '';
-      if (playerMove === 'rock') {
-        if (computerMove === 'rock') {
-          result = 'It is a Tie';
-        } else if (computerMove === 'paper') {
-          result = 'You Lose';
-        } else if (computerMove === 'scissors') {
-          result = 'You Win'
-        }
-      }
-
-      else if (playerMove == 'paper') {
-        if (computerMove == 'rock') {
-          result = 'You Win';
-        } else if (computerMove == 'paper') {
-          result = 'It is a Tie';
-        } else if (computerMove == 'scissors') {
-          result = 'You Lose';
-        }
-      }
-
-      else if (playerMove === 'scissors') {
-        if (computerMove == 'rock') {
-          result = 'You Lose';
-        } else if (computerMove == 'paper') {
-          result = 'You Win';
-        } else if (computerMove == 'scissors') {
-          result = 'It is a Tie';
-        }
-      }
-
-      if(result ==='You Win'){
-        score.wins += 1;
-      } else if(result ==='You Lose'){
-        score.loses += 1;
-      } else if(result ==='It is a Tie'){
-        score.ties += 1;
-      } 
-      localStorage.setItem('score', JSON.stringify(score));
-      updateScoreElement();
-      document.querySelector('.js-result').innerHTML = result;
-      document.querySelector('.js-moves').innerHTML = `You ${playerMove} - ${computerMove} Computer`;
-    }
-
-    function updateScoreElement(){
-      document.querySelector('.js-score').innerHTML= `Wins : ${score.wins}, loses : ${score.loses}, Ties : ${score.ties}`;
-    }
-
-    function pickComputerMove() {
-      const randomNumber = Math.random(); // Used 'const' because it cannot be changed 
-      let computerMove = ''; // used 'let' because it can be changed
-      if (randomNumber > 0 && randomNumber < 0.33) {
-        computerMove = 'rock'
-      } else if (randomNumber > 0.33 && randomNumber < 0.66) {
-        computerMove = 'paper';
-      } else if (randomNumber > 0.66 && randomNumber < 1) {
-        computerMove = 'scissors';
-      }
-      return computerMove;
-    }
-  </script>
-</body>
-
+    <script src="scripts/rock_paper_scissors.js"></script>
+  </body>
 </html>
