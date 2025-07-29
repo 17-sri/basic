@@ -5,42 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOM Projects</title>
   <style>
-    button {             /*just for fun, this isnnot in the script*/
-      font-style: italic;
-      font-weight: 700;
-      margin: 5px;
-      padding: 5px;
-      color: rgb(240, 215, 215);
-      background-color: rgb(2, 72, 23);
-      border-radius: 17px;
-      text-align: center;
-      margin-left: 2%;
-      font-size: large;
-    }
-    button:hover {         /*just for fun, this isnnot in the script*/
-       background-color: rgb(175, 231, 97);
-        color: rgb(230, 27, 27);
-        cursor: pointer;
-    }
-    input{                /*just for fun, this isnnot in the script*/
-      font-style: italic;
-      font-weight: 700;
-      margin: 5px;
-      padding: 5px;
-      color: rgb(208, 15, 15);
-      background-color: rgb(198, 226, 206);
-      border-radius: 7px;
-      text-align: center;
-      margin-left: 2%;
-      font-size: large;
-    }
+    
+    
   </style>
 </head>
 <body>
-  <p><b><h1>YouTube Subscribe Button</h1></b></p>
+  <p>YouTube Subscribe Button</p>
   <button onclick="subscribe();" class="js-subscribe-button" >Subscribe</button>
 
-  <p><b><h1>Amazon Shipping Calculator</h1></b></p>
+  <p>Amazon Shipping Calculator</p>
   <input placeholder="Cost Of Order" class="js-cost-input" onkeydown="handleCostKeydown(event);">
   <button onclick="calculateTotal();">Calculate</button>
   <p class="js-total-cost"></p>
