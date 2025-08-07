@@ -17,13 +17,14 @@
   }
 
   .thumbnail{
-    width: 300px;
-    display: block;
+    width: 100%;
+    border-radius: 10px;
   }
 
   .search-bar{
     display: block;
     border-style: double;
+    border-radius: 10px;
     height: 20px;
     margin: 10px;
     margin-top: 10px;
@@ -31,7 +32,8 @@
   }
 
   .video-title{
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 12px;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -47,23 +49,9 @@
     margin-bottom: 4px;
   }
 
-  .video-preview{
-    margin-left: 10px;
-    margin-right: 8px;
-    width: 300px;
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  .channel-picture{
-    display: inline-block;
-    width: 50px;
-    vertical-align: top;
-  }
-
-  .video-info{
-    display: inline-block;
-    width: 235px;
+  .video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
   }
 
   .profile-picture{
@@ -74,71 +62,113 @@
   .thumbnail-row{
     margin-bottom: 10px;
   }
+
+  .video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+
+  }
 </style>
 <body>
   <input class="search-bar" type="text" placeholder="Search here">
 
-  <div class="video-preview">
-    <div class="thumbnail-row">
-      <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
-    </div>
-    <div>
-      <div class="channel-picture">
-        <img class="profile-picture" src="channel-pictures/channel-1.jpeg" >
+  <div class="video-grid">
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
       </div>
-      <div class="video-info">
-        <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
-        <p class="video-author">Marques Brownlee</p>
-        <p class="video-stats">3.4M views &#183; 6 months ago</p>
-      </div>
-    </div>
-  </div>
-  
-  <div class="video-preview">
-    <div class="thumbnail-row">
-      <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
-    </div>
-    <div>
-      <div class="channel-picture">
-        <img class="profile-picture" src="channel-pictures/channel-2.jpeg" >
-      </div>
-      <div class="video-info">
-        <p class="video-title">Try not to laugh #9</p>
-        <p class="video-author">Markplier</p>
-        <p class="video-stats">19M views &#183; 9 years ago</p>
+      <div class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-pictures/channel-1.jpeg" >
+        </div>
+        <div class="video-info">
+          <p class="video-title">Talking Tech and AI with Google CEO Sundar Pichai!</p>
+          <p class="video-author">Marques Brownlee</p>
+          <p class="video-stats">3.4M views &#183; 6 months ago</p>
+        </div>
       </div>
     </div>
-  </div>
+    
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+      </div>
+      <div class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-pictures/channel-2.jpeg" >
+        </div>
+        <div class="video-info">
+          <p class="video-title">Try not to laugh #9</p>
+          <p class="video-author">Markplier</p>
+          <p class="video-stats">19M views &#183; 9 years ago</p>
+        </div>
+      </div>
+    </div>
 
-  <div class="video-preview">
-    <div class="thumbnail-row">
-      <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
-    </div>
-    <div>
-      <div class="channel-picture">
-        <img class="profile-picture" src="channel-pictures/channel-2.jpeg" >
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnails/thumbnail-3.webp">
       </div>
-      <div class="video-info">
-        <p class="video-title">Try not to laugh #9</p>
-        <p class="video-author">Markplier</p>
-        <p class="video-stats">19M views &#183; 9 years ago</p>
+      <div class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-pictures/channel-3.jpeg" >
+        </div>
+        <div class="video-info">
+          <p class="video-title">Crazy Tiktok Taken Moments before Disasters</p>
+          <p class="video-author">SSSniperWolf</p>
+          <p class="video-stats">12M views &#183; 1 years ago</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="video-preview">
-    <div class="thumbnail-row">
-      <img class="thumbnail" src="thumbnails/thumbnail-2.webp">
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnails/thumbnail-4.webp">
+      </div>
+      <div class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-pictures/channel-4.jpeg" >
+        </div>
+        <div class="video-info">
+          <p class="video-title">The Simplest Math Problem No One Can Solve</p>
+          <p class="video-author">Veritasium</p>
+          <p class="video-stats">18M views &#183; 4 Months ago</p>
+        </div>
+      </div>
     </div>
-    <div>
-      <div class="channel-picture">
-        <img class="profile-picture" src="channel-pictures/channel-2.jpeg" >
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnails/thumbnail-5.webp">
       </div>
-      <div class="video-info">
-        <p class="video-title">Try not to laugh #9</p>
-        <p class="video-author">Markplier</p>
-        <p class="video-stats">19M views &#183; 9 years ago</p>
+      <div class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-pictures/channel-5.jpeg" >
+        </div>
+        <div class="video-info">
+          <p class="video-title">Try not to laugh #9</p>
+          <p class="video-author">Markplier</p>
+          <p class="video-stats">19M views &#183; 9 years ago</p>
+        </div>
       </div>
+    </div>
+
+    <div class="video-preview">
+      <div class="thumbnail-row">
+        <img class="thumbnail" src="thumbnails/thumbnail-6.webp">
+      </div>
+      <div class="video-info-grid">
+        <div class="channel-picture">
+          <img class="profile-picture" src="channel-pictures/channel-6.jpeg" >
+        </div>
+        <div class="video-info">
+          <p class="video-title">Try not to laugh #9</p>
+          <p class="video-author">Markplier</p>
+          <p class="video-stats">19M views &#183; 9 years ago</p>
+        </div>
+      </div>   
     </div>
   </div>
 </body>

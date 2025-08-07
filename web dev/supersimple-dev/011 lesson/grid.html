@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grid Practice</title>
 </head>
-<body>
+<body style="padding-bottom: 1000px;">
   <div style="
       display: grid;
       grid-template-columns: 100px 100px;
@@ -20,9 +20,9 @@
       grid-template-columns: 100px 100px 200px;
     ">
     <div style="background-color: lightblue;">100 px</div>
-    <div style="background-color: lightcoral;">100 px<p>text</p></div>
+    <div style="background-color: lightpink;">100 px<p>text</p></div>
     <div style="background-color: lightblue;">200 px</div>
-    <div style="background-color: lightcoral;">100 px</div>
+    <div style="background-color: lightpink;">100 px</div>
   </div>
 
   <div style="
@@ -32,7 +32,7 @@
       /*fr - free space(it fill out free space)*/
     ">
     <div style="background-color: lightblue;">100 px</div>
-    <div style="background-color: lightcoral;">1 fr</div>
+    <div style="background-color: lightpink;">1 fr</div>
   </div>
 
   <div style="
@@ -42,7 +42,7 @@
       /*here 1fr 1fr shares the free space equally*/
     ">
     <div style="background-color: lightblue;">100 px</div>
-    <div style="background-color: lightcoral;">1 fr</div>
+    <div style="background-color: lightpink;">1 fr</div>
     <div style="background-color: lightblue;">1 fr</div>
   </div>
 
@@ -53,8 +53,25 @@
       /*shares the free space 1:2 ratio*/
     ">
     <div style="background-color: lightblue;">100 px</div>
-    <div style="background-color: lightcoral;">1 fr</div>
+    <div style="background-color: lightpink;">1 fr</div>
     <div style="background-color: lightblue;">1 fr</div>
+  </div>
+
+  <div style="
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      /*shares the free space 1:1:1 ratio*/
+      column-gap: 20px;
+      row-gap: 40px;
+    ">
+    <div style="background-color: lightblue; height: 200px;">1 fr</div>
+    <div style="background-color: lightpink; height: 200px;">1 fr</div>
+    <div style="background-color: lightblue; height: 200px;">1 fr</div>
+    <div style="background-color: lightpink; height: 200px;">1 fr</div>
+    <div style="background-color: lightblue; height: 200px;">1 fr</div>
+    <div style="background-color: lightpink; height: 200px;">1 fr</div>
+    <div style="background-color: lightblue; height: 200px;">1 fr</div>
   </div>
   
 </body>
