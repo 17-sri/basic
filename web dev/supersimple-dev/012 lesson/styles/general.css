@@ -1,0 +1,9 @@
+p {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: Roboto, Arial;
+  /*here 'Arial' is backup font*/
+}
+body{
+  margin: 0;
+}
