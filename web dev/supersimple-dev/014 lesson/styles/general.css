@@ -5,5 +5,7 @@ p {
   /*here 'Arial' is backup font*/
 }
 body{
-  margin: 0;
+  margin: 0; 
+  padding-top: 80px;
+  padding-left: 80px;
 }

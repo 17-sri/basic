@@ -3,6 +3,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(228, 228, 228);
 }
 
 .left-section {
@@ -38,8 +46,8 @@
   border-style: solid;
   border-radius: 2px;
   border-color: rgb(192, 192, 192);
-  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05); /*border inside*/
-  width: 0; /*to make it shrink*/
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05); /* border inside */
+  width: 0; /* to make it shrink */
 }
 
 .search-bar::placeholder {
